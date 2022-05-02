@@ -17,7 +17,7 @@ function Popular() {
       setPopular(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=12`
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=20`
       );
 
       const data = await api.json();
@@ -45,7 +45,7 @@ function Popular() {
           {popular.map((recipe) => {
             return (
               <SplideSlide>
-                <Card>
+                <Card key={recipe.id}>
                   <Link to={"/recipe/" + recipe.id}>
                     <p>{recipe.title}</p>
                     <img src={recipe.image} alt={recipe.title} />

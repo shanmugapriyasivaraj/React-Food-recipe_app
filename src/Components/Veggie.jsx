@@ -43,7 +43,7 @@ function Veggie() {
           {veggie.map((recipe) => {
             return (
               <SplideSlide>
-                <Card>
+                <Card key={recipe.id}>
                   <Link to={"/recipe/" + recipe.id}>
                     <p>{recipe.title}</p>
                     <img src={recipe.image} alt={recipe.title} />
