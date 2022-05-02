@@ -43,7 +43,7 @@ function Veggie() {
           {veggie.map((recipe) => {
             return (
               <SplideSlide>
-                <Card key={recipe.id}>
+                <Card>
                   <Link to={"/recipe/" + recipe.id}>
                     <p>{recipe.title}</p>
                     <img src={recipe.image} alt={recipe.title} />
@@ -72,8 +72,8 @@ img{
     border-radius : 1rem
     position :absolute;
     left : 0;
-    width:100%;
-    height : 100%;
+    width:350px;
+    height : 300px;
     object-fit:cover; 
 }
 p{
